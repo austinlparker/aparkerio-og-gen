@@ -16,7 +16,7 @@ export async function GET(request: Request) {
     ? searchParams.get('title')?.slice(0, 100)
     : 'Default Title';
 
-  function Label({ children }) {
+  function Label({ children }: { children: React.ReactNode }) {
     return <label style={{
       fontFamily: 'Chicago_12',
       fontSize: 100,
