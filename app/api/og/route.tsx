@@ -11,10 +11,8 @@ export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
  
   // ?title=<title>
-  const hasTitle = searchParams.has('title');
-  const title = hasTitle
-    ? searchParams.get('title')?.slice(0, 100)
-    : 'Default Title';
+  const rawTitle = decodeURIComponent(searchParams.get('title')?.slice(0, 100) || '');
+  const title = rawTitle.split('.').slice(0, -1).join('.') || 'Read more on the blog!';
 
   function Label({ children }: { children: React.ReactNode }) {
     return <label style={{
