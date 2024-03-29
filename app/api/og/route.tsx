@@ -35,7 +35,7 @@ export async function GET(request: Request) {
         justifyContent: 'center',
         fontFamily: 'Noto Sans',
         fontSize: 70,
-        backgroundImage: `url('http://staging.aparker.io/wp-content/uploads/2024/01/background-og-1200-630.png')`,
+        backgroundImage: `url('https://aparker.io/wp-content/uploads/2024/01/background-og-1200-630.png')`,
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
       }}
